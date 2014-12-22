@@ -1,0 +1,3 @@
+[submodule "Primes"]
+	path = Primes
+	url = https://github.com/snowleopard/Primes.git
