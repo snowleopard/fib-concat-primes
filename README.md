@@ -9,11 +9,11 @@ Known trivial examples:
 
 I got curious if there were any other Fibonacci concat primes and wrote a generator in Haskell using [this implementation of Miller-Rabin primality test](https://github.com/pernas/Primes).
 
-[The generator](fibConcatPrimes.hs) seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10^35000!
+[The generator](fibConcatPrimes.hs) seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10<sup>35000</sup>!
 
 Being a bit disappointed by my wasted efforts, I decided to try my luck by _reversing_ the numbers. And it worked!
 
-The following four _reversed Fibonacci concat primes_ were found below 10^20000:
+The following four _reversed Fibonacci concat primes_ were found below 10<sup>20000</sup>:
  * 11 = reverse (1 ○ 1)
  * 211 = reverse (1 ○ 1 ○ 2)
  * 853211 = reverse (1 ○ 1 ○ 2 ○ 3 ○ 5 ○ 8)
