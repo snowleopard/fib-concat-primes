@@ -1,7 +1,7 @@
 import Development.Shake
 import Development.Shake.FilePath
 
-target              = "fibConcatPrimes" <.> exe
+target              = "_build" </> "fibConcatPrimes" <.> exe
 primes              = "Primes" </> "Primes.hs"
 results             = "fibConcatPrimes.txt"
 reversedResults     = "reversedFibConcatPrimes.txt"
@@ -15,9 +15,9 @@ main = shakeArgs shakeOptions{shakeFiles="_build/"} $ do
         removeFilesAfter "." [target, "_build//*", "//*.hi", "//*.o"]
 
     target %> \out -> do
-        let src = out -<.> "hs"
+        let src = takeFileName out -<.> "hs"
         need [src, primes]
-        cmd "ghc" ["-O2", "-i" ++ takeDirectory primes, src]
+        cmd "ghc" ["-O2", "-i" ++ takeDirectory primes, src, "-o", target]
 
     results %> \out -> do
         need [target]

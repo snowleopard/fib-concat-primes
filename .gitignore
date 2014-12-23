@@ -1,3 +1,4 @@
 *.o
 *.hi
 _shake/
+_build/
