@@ -26,10 +26,10 @@ main = shakeArgs shakeOptions{shakeFiles="_build/"} $ do
 
     reversedResults %> \out -> do
         need [target]
-        Stdout res <- cmd target ["-reverse"]
+        Stdout res <- cmd target ["-reversed"]
         writeFileChanged out res
 
     semireversedResults %> \out -> do
         need [target]
-        Stdout res <- cmd target ["-semireverse"]
+        Stdout res <- cmd target ["-semireversed"]
         writeFileChanged out res
