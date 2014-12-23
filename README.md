@@ -9,7 +9,7 @@ Known trivial examples:
 
 I got curious if there were any other Fibonacci concat primes and wrote a generator in Haskell using [this implementation of Miller-Rabin primality test](https://github.com/pernas/Primes).
 
-[The generator](fibConcatPrimes.hs) seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10<sup>35000</sup>!
+[My generator](fibConcatPrimes.hs) seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10<sup>35000</sup>! It took just a couple of hours for the generator to do the work, which I thought was pretty impressive since I made no effort to optimise the code.
 
 Being a bit disappointed by my wasted efforts, I decided to try my luck by _reversing_ the numbers. And it worked!
 
