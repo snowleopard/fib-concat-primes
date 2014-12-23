@@ -11,12 +11,14 @@ forwardConcat x y = read $ show x ++ show y
 reverseConcat x y = read $ (reverse $ show y) ++ show x
 
 main = do
-    mode <- getArgs
-    let concat = case mode of
-            ("reverse":_) -> reverseConcat
-            otherwise     -> forwardConcat
+    args <- getArgs
+    let limit = if "-limit" `elem` args
+                then read (head $ drop 1 $ dropWhile (/= "-limit") args)
+                else 1000
+        concat  = if "-reverse" `elem` args then reverseConcat else forwardConcat
+        verbose = "-verbose" `elem` args
     hSetBuffering stdout NoBuffering
     seed <- newStdGen
-    forM_ (scanl concat (head fib) (tail fib)) $ \x -> do
-        when (isPrime seed x) $ putStrLn $ show x ++ " is a Fibonacci concat prime!"
-        putStrLn $ "Checked all up to 10^" ++ show ((length $ show x) - 1) ++ "..."
+    forM_ (takeWhile (< 10^limit) $ scanl concat (head fib) (tail fib)) $ \x -> do
+        when (isPrime seed x) $ putStrLn $ show x
+        when verbose $ putStrLn $ "Checked all up to 10^" ++ show ((length $ show x) - 1) ++ "..."
