@@ -1,17 +1,17 @@
 Fibonacci concat primes
 =======================
 
-A _Fibonacci concat prime_ is a prime number obtained by concatenating several first elements of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...).
+A _Fibonacci concat prime_ is a prime number obtained by concatenating several first elements of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...). These numbers showed up in [Evelyn Lamb's tweet](https://twitter.com/evelynjlamb/status/546943925357785089) and got me interested, especially since I wanted to play with primality testing of big numbers in Haskell. ('Fibonacci concat prime' is a completely made up name; shout if you know the right one!)
 
 Known trivial examples: 
  * 11 = 1 ○ 1
  * 1123 = 1 ○ 2 ○ 3 ○ 5 
 
-I got curious if there are other Fibonacci concat primes and wrote a generator in Haskell using [this implementation of Miller-Rabin primality test](https://github.com/pernas/Primes).
+I got curious if there were any other Fibonacci concat primes and wrote a generator in Haskell using [this implementation of Miller-Rabin primality test](https://github.com/pernas/Primes).
 
-The generator seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10^35000!
+[The generator](fibConcatPrimes.hs) seems to work fine, but unfortunately it reported that there were no other Fibonacci concat primes less than 10^35000!
 
-Being a bit upset by my wasted efforts, I decided to try my luck by _reversing_ the numbers. And it worked!
+Being a bit disappointed by my wasted efforts, I decided to try my luck by _reversing_ the numbers. And it worked!
 
 The following four _reversed Fibonacci concat primes_ were found below 10^20000:
  * 11 = reverse (1 ○ 1)
