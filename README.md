@@ -1,7 +1,7 @@
 Fibonacci concat primes
 =======================
 
-A _Fibonacci concat prime_ is a prime number obtained by concatenating several first elements of the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...). These numbers showed up in [Evelyn Lamb's tweet](https://twitter.com/evelynjlamb/status/546943925357785089) and got me interested, especially since I wanted to play with primality testing of big numbers in Haskell. ('Fibonacci concat prime' is a completely made up name; shout if you know the right one!)
+A _Fibonacci concat prime_ is a prime number obtained by concatenating several first elements of the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number) (1, 1, 2, 3, 5, 8, 13, ...). These numbers showed up in [Evelyn Lamb's tweet](https://twitter.com/evelynjlamb/status/546943925357785089) and got me interested, especially since I wanted to play with primality testing of big numbers in Haskell. ('Fibonacci concat prime' is a completely made up name; shout if you know the right one!)
 
 Known trivial examples: 
  * 11 = 1 ○ 1
