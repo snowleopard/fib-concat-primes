@@ -23,4 +23,4 @@ So, now if you need a big (754 digits) prime number, just concatenate Fibonacci 
 
 P.S.: A comment on [this OEIS sequence](http://oeis.org/A019523) says that no other non-reversed Fibonacci concat primes are currently known.
 
-P.P.S: There is another related sequence at OEIS: [A134069](http://oeis.org/A134069). Note that it is different from what I call reversed Fibonacci concat primes: the sequence of Fibonacci numbers is reversed, but the numbers themselves are not, e.g., it contains 13853211 instead of 31853211. To distinguish the sequences, I will refer to A134069 as _semireversed Fibonacci concat primes_. I have implemented their generation as well (try the **‑semireversed** option).
+P.P.S: There is another related sequence at OEIS: [A134069](http://oeis.org/A134069). Note that it is different from what I call reversed Fibonacci concat primes: the sequence of Fibonacci numbers is reversed, but the numbers themselves are not, e.g., it contains 13853211 instead of 31853211. To distinguish the sequences, I will refer to A134069 as _semireversed Fibonacci concat primes_. I have implemented their generation as well (try the **-semireversed** option).
