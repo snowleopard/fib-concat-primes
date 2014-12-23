@@ -11,8 +11,8 @@ main = shakeArgs shakeOptions{shakeFiles="_build/"} $ do
     want [target, results, reversedResults, semireversedResults]
 
     "clean" ~> do
-        putNormal "Cleaning files in _build"
-        removeFilesAfter "." [target, "_build//*", "//*.hi", "//*.o"]
+        putNormal "Clean up"
+        removeFilesAfter "." ["_build//*", "//*.hi", "//*.o"]
 
     target %> \out -> do
         let src = takeFileName out -<.> "hs"
