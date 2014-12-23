@@ -5,7 +5,7 @@ A _Fibonacci concat prime_ is a prime number obtained by concatenating several f
 
 Known trivial examples: 
  * 11 = 1 ○ 1
- * 1123 = 1 ○ 2 ○ 3 ○ 5 
+ * 1123 = 1 ○ 1 ○ 2 ○ 3 
 
 I got curious if there were any other Fibonacci concat primes and wrote a generator in Haskell using [this implementation of Miller-Rabin primality test](https://github.com/pernas/Primes).
 
