@@ -7,15 +7,18 @@ import System.IO
 fib :: [Integer] 
 fib = 1 : 1 : zipWith (+) fib (tail fib)
 
-forwardConcat x y = read $ show x ++ show y
-reverseConcat x y = read $ (reverse $ show y) ++ show x
+forwardConcat     x y = read $ show x ++ show y
+reverseConcat     x y = read $ (reverse $ show y) ++ show x
+semireverseConcat x y = read $ show y ++ show x
 
 main = do
     args <- getArgs
     let limit = if "-limit" `elem` args
                 then read (head $ drop 1 $ dropWhile (/= "-limit") args)
                 else 1000
-        concat  = if "-reverse" `elem` args then reverseConcat else forwardConcat
+        concat | "-reverse"     `elem` args = reverseConcat 
+               | "-semireverse" `elem` args = semireverseConcat
+               | otherwise                  = forwardConcat
         verbose = "-verbose" `elem` args
     hSetBuffering stdout NoBuffering
     seed <- newStdGen
