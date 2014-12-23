@@ -21,6 +21,20 @@ The following four _reversed Fibonacci concat primes_ were found below 10<sup>20
 
 So, now if you need a big (754 digits) prime number, just concatenate Fibonacci numbers from F<sub>1</sub> to F<sub>84</sub> and then reverse the result!
 
-P.S.: A comment on [this OEIS sequence](http://oeis.org/A019523) says that no other non-reversed Fibonacci concat primes are currently known.
+Related work
+------------
 
-P.P.S: There is another related sequence at OEIS: [A134069](http://oeis.org/A134069). Note that it is different from what I call reversed Fibonacci concat primes: the sequence of Fibonacci numbers is reversed, but the numbers themselves are not, e.g., it contains 13853211 instead of 31853211. To distinguish the sequences, I will refer to A134069 as _semireversed Fibonacci concat primes_. I have implemented their generation as well (try the `-semireversed` option); the only semireversed Fibonacci concat primes below 10<sup>20000</sup> are 11, 211 and 853211.
+A comment on [this OEIS sequence](http://oeis.org/A019523) says that no other non-reversed Fibonacci concat primes are currently known.
+
+There is another related sequence at OEIS: [A134069](http://oeis.org/A134069). Note that it is different from what I call reversed Fibonacci concat primes: the sequence of Fibonacci numbers is reversed, but the numbers themselves are not, e.g., it contains 13853211 instead of 31853211. To distinguish the sequences, I will refer to A134069 as _semireversed Fibonacci concat primes_. I have implemented their generation as well (try the `-semireversed` option); the only semireversed Fibonacci concat primes below 10<sup>20000</sup> are 11, 211 and 853211.
+
+Instructions
+------------
+
+To clone this repository, run the following command:
+```
+git clone --recursive https://github.com/snowleopard/fib-concat-primes.git
+```
+Note that `--recursive` is important, as otherwise submodule `Primes` will not be cloned.
+
+To build the sources, run the `build.bat` script (should be cross-platform).
